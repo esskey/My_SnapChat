@@ -1,0 +1,20 @@
+<ion-pane>
+    <ion-header-bar class="bar-stable">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" href="#/"></a>
+        <h1 class="title">Connexion</h1>
+    </ion-header-bar>
+
+    <ion-content ng-controller="ConnexionCtrl">
+        <label class="item item-input">
+            <input ng-model="email" type="email" placeholder="Adresse e-mail">
+        </label>
+        <label class="item item-input">
+            <input ng-model="password" type="password" placeholder="Mot de passe">
+        </label>
+        <div class="padding-top">
+            <button type="submit" class="button button-block button-positive" ng-click="connexion()">Log in</button>
+        </div>
+        <p id="error"></p>
+        <p id="success"></p>
+    </ion-content>
+</ion-pane>

@@ -1,0 +1,37 @@
+/* Empty. Add your own CSS if you like */
+img
+{
+    width: 100%;
+}
+
+#nada
+{
+    display: none;
+    text-align: center;
+    margin: 50px;
+    font-size: 25px;
+}
+
+#error
+{
+    text-align: center;
+    color: red;
+}
+
+#errorr
+{
+    text-align: center;
+    color: red;
+}
+
+#success
+{
+    text-align: center;
+    color: green;
+}
+
+#yes
+{
+    text-align: center;
+    color: green;
+}

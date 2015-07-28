@@ -1,0 +1,19 @@
+<ion-pane>
+    <ion-header-bar class="bar-stable">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" href="#/"></a>
+        <h1 class="title">Inscription</h1>
+    </ion-header-bar>
+
+    <ion-content ng-controller="InscriptionCtrl">
+        <label class="item item-input">
+            <input ng-model="email" type="email" placeholder="Adresse e-mail">
+        </label>
+        <label class="item item-input">
+            <input ng-model="password" type="password" placeholder="Nouveau mot de passe">
+        </label>
+        <div class="padding-top">
+            <button type="submit" class="button button-block button-positive" ng-click="inscription()">Sign in</button>
+        </div>
+        <p id="errorr"></p>
+    </ion-content>
+</ion-pane>

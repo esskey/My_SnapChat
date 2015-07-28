@@ -1,0 +1,36 @@
+<ion-pane ng-controller="PhotoCtrl">
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">List Snap</h1>
+    </ion-header-bar>
+
+    <ion-content>
+        <div ng-controller="ConnexionCtrl" id="listsnap">
+            <p id="nada"></p>
+            <a class="item item-avatar" href="#/listSnap" ng-repeat="user in bada" ng-click="viewPhoto(user.url, user.temps, user.id)">
+                <img src="img/snap.jpg">
+                <h2>{{ user.email }}</h2>
+                <p>{{ user.temps }} secondes</p>
+            </a>
+        </div>
+        <img src="" alt="" id="peax"/>
+    </ion-content>
+
+    <div class="tabs tabs-icon-left">
+        <a class="tab-item" href="#/listSnap">
+            <i class="icon ion-heart"></i>
+            Favoris
+        </a>
+        <a class="tab-item" ng-click="getPhoto()">
+            <i class="icon ion-camera"></i>
+            Snap
+        </a>
+        <a class="tab-item" href="#/edit">
+            <i class="icon ion-gear-a"></i>
+            Settings
+        </a>
+        <a class="tab-item" ng-click="logout()">
+            <i class="icon ion-log-out"></i>
+            Déconnexion
+        </a>
+    </div>
+</ion-pane>

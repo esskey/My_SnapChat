@@ -1,0 +1,52 @@
+<ion-pane ng-controller="PhotoCtrl">
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">SnapChat</h1>
+    </ion-header-bar>
+
+
+    <ion-content>
+        <div class="list list-">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" ng-model="query" placeholder="Search">
+            </label>
+        </div>
+        <div class="item item-input item-select">
+            <div class="input-label">
+                Seconde
+            </div>
+            <select id="sec">
+                <option selected>3</option>
+                <option>5</option>
+                <option>10</option>
+            </select>
+        </div>
+        <div class="list">
+                <p id="yes"></p>
+            <a class="item item-avatar" href="#" ng-repeat="user in data | filter:query" ng-click="envoiPhoto(user.id)">
+                <img src="img/snap.jpg">
+                <h2>{{ user.email }}</h2>
+                <p>{{ user.id }}</p>
+            </a>
+        </div>
+    </ion-content>
+
+    <div class="tabs tabs-icon-left">
+        <a class="tab-item" href="#/listSnap">
+            <i class="icon ion-heart"></i>
+            Favoris
+        </a>
+        <a class="tab-item" ng-click="getPhoto()">
+            <i class="icon ion-camera"></i>
+            Snap
+        </a>
+        <a class="tab-item" href="#/edit">
+            <i class="icon ion-gear-a"></i>
+            Settings
+        </a>
+        <a class="tab-item" ng-click="logout()">
+            <i class="icon ion-log-out"></i>
+            Déconnexion
+        </a>
+    </div>
+</ion-pane>

@@ -1,0 +1,46 @@
+<ion-pane ng-controller="PhotoCtrl">
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">Modification</h1>
+    </ion-header-bar>
+
+
+    <ion-content ng-controller="editCtrl">
+        <div class="list">
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                    <input type="text" ng-model="mail" placeholder="nouveau email" >
+                </label>
+                <button class="button button-small" ng-click="editemail()">
+                    Submit
+                </button>
+            </div>
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                    <input ng-model="pass" type="password" placeholder="nouveau mot de passe">
+                </label>
+                <button class="button button-small" ng-click="editpass()">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </ion-content>
+
+    <div class="tabs tabs-icon-left">
+        <a class="tab-item" href="#/listSnap">
+            <i class="icon ion-heart"></i>
+            Favoris
+        </a>
+        <a class="tab-item" ng-click="getPhoto()">
+            <i class="icon ion-camera"></i>
+            Snap
+        </a>
+        <a class="tab-item" href="#/edit">
+            <i class="icon ion-gear-a"></i>
+            Settings
+        </a>
+        <a class="tab-item" ng-click="logout()">
+            <i class="icon ion-log-out"></i>
+            Déconnexion
+        </a>
+    </div>
+</ion-pane>
